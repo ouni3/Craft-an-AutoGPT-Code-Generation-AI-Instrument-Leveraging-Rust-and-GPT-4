@@ -15,7 +15,9 @@ pub async fn call_gpt(messages: Vec<Message>) -> Result<String, Box<dyn std::err
         env::var("OPEN_AI_ORG").expect("OPEN_AI_ORG not found in enviornment variables");
 
     // Confirm endpoint
-    let url: &str = "https://api.openai.com/v1/chat/completions";
+    // let url: &str = "https://api.openai.com/v1/chat/completions";
+    // let url: &str = "https://api.chatanywhere.tech/v1/chat/completions";
+    let url: &str = "https://api.groq.com/openai/v1/chat/completions";
 
     // Create headers
     let mut headers: HeaderMap = HeaderMap::new();
@@ -42,7 +44,8 @@ pub async fn call_gpt(messages: Vec<Message>) -> Result<String, Box<dyn std::err
 
     // Create chat completion
     let chat_completion: ChatCompletion = ChatCompletion {
-        model: "gpt-4".to_string(),
+        model: "llama-3.2-90b-text-preview".to_string(),
+        // model: "gpt-4o".to_string(),
         messages,
         temperature: 0.1,
     };
