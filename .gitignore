@@ -1,0 +1,17 @@
+# 忽略properties文件
+*.properties
+
+# 忽略指定文件
+config.properties
+*.env
+
+# 忽略properties文件中的指定行
+*.properties
+!OPEN_AI_ORG=*
+!OPEN_AI_KEY=*
+
+# 忽略node_modules文件夹
+node_modules/
+
+# 忽略.vscode文件夹
+.vscode/
