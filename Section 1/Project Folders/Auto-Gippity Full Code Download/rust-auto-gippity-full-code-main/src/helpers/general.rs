@@ -5,14 +5,16 @@ use reqwest::Client;
 use serde::de::DeserializeOwned;
 use std::fs;
 
-const CODE_TEMPLATE_PATH: &str = r"F:\Craft autogpt\Section 1\Project Folders\Actix Web Server Template\rust-web-server-template-main\src\code_template.rs";
+const CODE_TEMPLATE_PATH: &str =
+    "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/code_template.rs";
 
-pub const WEB_SERVER_PROJECT_PATH: &str = r"F:\Craft autogpt\Section 1\Project Folders\Actix Web Server Template\rust-web-server-template-main/";
+pub const WEB_SERVER_PROJECT_PATH: &str = "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/";
 
-pub const EXEC_MAIN_PATH: &str = r"F:\Craft autogpt\Section 1\Project Folders\Actix Web Server Template\rust-web-server-template-main/src/main.rs";
+pub const EXEC_MAIN_PATH: &str =
+    "/Users/shaun/Code/TUTORIALS/rust_autogpt/web_template/src/main.rs";
 
-const API_SCHEMA_PATH: &str = r"F:\Craft autogpt\Section 1\Project Folders\Auto-Gippity Full Code Download\rust-auto-gippity-full-code-main\schemas\api_schema.json";
-
+const API_SCHEMA_PATH: &str =
+    "/Users/shaun/Code/TUTORIALS/rust_autogpt/auto_gippity/schemas/api_schema.json";
 
 // Extend ai function to encourage specific output
 pub fn extend_ai_function(ai_func: fn(&str) -> &'static str, func_input: &str) -> Message {
